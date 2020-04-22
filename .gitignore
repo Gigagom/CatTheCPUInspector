@@ -14,6 +14,8 @@
 *.userprefs
 
 # Build results
+CPUUsageWithCat/[Dd]ebug/
+CPUUsageWithCat/[Rr]elease/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
