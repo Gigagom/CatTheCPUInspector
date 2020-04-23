@@ -8,7 +8,7 @@ namespace CPUUsageWithCat
 {
     public class CatInTrayIcon : ApplicationContext
     {
-        static private NotifyIcon trayIcon;
+        private static NotifyIcon trayIcon;
 
         public CatInTrayIcon()
         {
@@ -28,9 +28,9 @@ namespace CPUUsageWithCat
         void Exit(object sender, EventArgs e)
         {
             trayIcon.Visible = false;
-            Application.Exit();
+            Application.Exit(); 
         }
 
-        static public void SetIcon(Icon image) => trayIcon.Icon = image;
+        public static void SetIcon(Icon image) => trayIcon.Icon = image;
     }
 }

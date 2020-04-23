@@ -8,25 +8,19 @@ namespace CPUUsageWithCat
 {
     class CatAnimation
     {
-        static private Icon[] icons = { Properties.Resources.cat0, Properties.Resources.cat1, Properties.Resources.cat2,
+        private static Icon[] icons = { Properties.Resources.cat0, Properties.Resources.cat1, Properties.Resources.cat2,
                                  Properties.Resources.cat3, Properties.Resources.cat4 };
-        static Timer timer = new Timer();
-        static private int currentImage = 0;
-        static public void Start(int interval)
+        private static Timer timer = new Timer();
+        private static int currentImage = 0;
+        public static void Start(int interval)
         {
             timer.Interval = interval;
             timer.Tick += new EventHandler(ChangeImage);
             timer.Start();
         }
-        static public void SetInterval(int interval)
-        {
-            timer.Interval = interval;
-        }
-        static public void Stop()
-        {
-            timer.Stop();
-        }
-        static public void ChangeImage(object sender, EventArgs e)
+        public static void SetInterval(int interval) => timer.Interval = interval;
+        public static void Stop() => timer.Stop();
+        public static void ChangeImage(object sender, EventArgs e)
         {
             if (timer.Interval >= 145)
             {
